@@ -1,0 +1,35 @@
+﻿<Window x:Class="StaffManager.Views.EditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Person" Height="225" Width="400">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Edit Name:" FontSize="16" Margin="5" Grid.Row="0"/>
+
+        <TextBox Grid.Row="1"
+                 Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                 FontSize="16"
+                 Margin="5"
+                 Width="250"/>
+
+        <Button Grid.Row="2"
+                Content="Save"
+                Margin="5"
+                Width="100"
+                Command="{Binding SaveCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" />
+
+        <TextBlock Grid.Row="3"
+                   Foreground="Red"
+                   Text="{Binding [Name]}"
+                   Margin="5"
+                   Height="35"/>
+    </Grid>
+</Window>
