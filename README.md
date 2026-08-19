@@ -48,7 +48,7 @@ All staff data is stored and updated using Entity Framework Core.
 - **WPF**
 - **MVVM**
 - **Entity Framework Core**
-- **SQLite** (or your chosen DB)
+- **SQLite**
 - **Visual Studio**
 
 ---
